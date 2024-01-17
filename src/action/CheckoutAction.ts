@@ -11,8 +11,8 @@ const loadStripeCheckout = async ({
   quantity: number;
 }) => {
   const session = await stripe.checkout.sessions.create({
-    success_url: "http://localhost:3000/success",
-    cancel_url: "http://localhost:3000/cancel",
+    success_url: "https://example-stripe-nextjs.vercel.app/success",
+    cancel_url: "https://example-stripe-nextjs.vercel.app/cancel",
     payment_method_types: ["card"],
     line_items: [
       {
